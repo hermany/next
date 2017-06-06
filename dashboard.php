@@ -19,7 +19,6 @@ echo $fmt->header->js_jquery();
 $fmt->header->title_page("Dashboard");
 ?>
 <link href="<?php echo _RUTA_WEB_NUCLEO; ?>css/summernote-bs3.css" rel="stylesheet"/>
-
 <link href="<?php echo _RUTA_WEB_NUCLEO; ?>css/summernote.css" rel="stylesheet">
 <script src="<?php echo _RUTA_WEB_NUCLEO; ?>js/summernote.js"></script>
 
@@ -74,6 +73,7 @@ $fmt->header->title_page("Dashboard");
   </div>
 
   <script src="<?php echo _RUTA_WEB_NUCLEO; ?>js/bootstrap.js"></script>
+  <script src="<?php echo _RUTA_WEB_NUCLEO; ?>js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="<?php echo _RUTA_WEB_NUCLEO; ?>js/bootstrap-datetimepicker.min.js"></script>
 <script type="text/javascript" src="<?php echo _RUTA_WEB_NUCLEO; ?>js/bootstrap-datetimepicker.es.js"></script>
   <script type="text/javascript" language="javascript" src="<? echo _RUTA_WEB_NUCLEO; ?>js/core.js?reload"></script>
