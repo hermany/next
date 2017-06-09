@@ -11,7 +11,7 @@ $fmt = new CONSTRUCTOR;
 </script>
 <div class="slide-portada" id="slides">
   <?php
-    $consulta_m ="SELECT DISTINCT mul_id,mul_url_archivo, mul_leyenda, mul_descripcion FROM multimedia, multimedia_categoria  WHERE mul_cat_cat_id=1  and mul_cat_mul_id=mul_id AND mul_activar=1 ORDER BY `multimedia_categoria`.`mul_cat_orden` desc limit 0,5";
+    $consulta_m ="SELECT DISTINCT mul_id,mul_url_archivo, mul_leyenda, mul_descripcion FROM multimedia, multimedia_categorias  WHERE mul_cat_cat_id=1  and mul_cat_mul_id=mul_id AND mul_activar=1 ORDER BY `multimedia_categorias`.`mul_cat_orden` desc limit 0,5";
     $rs_m =$fmt->query->consulta($consulta_m);
     $num_m=$fmt->query->num_registros($rs_m);
     if($num_m>0){
