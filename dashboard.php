@@ -38,7 +38,6 @@ $fmt->header->title_page("Dashboard");
   <link rel="stylesheet" href="<?php echo _RUTA_WEB._THEME_DEFAULT_ADMIN; ?>?reload" rel="stylesheet" type="text/css">
   <?php } ?>
   <?php
-
   require_once(_RUTA_NUCLEO.'modulos/nav/navbar.adm.php');
   ?>
   <div class='preloader-modulo'></div>
@@ -46,8 +45,8 @@ $fmt->header->title_page("Dashboard");
     <?php
 
     if ($_GET["m"]){
-      $sql ="SELECT mod_url,mod_id,mod_ruta_amigable FROM modulos WHERE mod_ruta_amigable='".$_GET["m"]."'";
-      $rs = $fmt->query->consulta($sql);
+      $sql ="SELECT mod_url,mod_id,mod_ruta_amigable FROM modulo WHERE mod_ruta_amigable='".$_GET["m"]."'";
+      $rs = $fmt->query->consulta($sql,__METHOD__);
       $row = $fmt->query->obt_fila($rs);
       $url_mod = _RUTA_NUCLEO."".$row["mod_url"];
       $url = _RUTA_NUCLEO."".$row["mod_url"];
