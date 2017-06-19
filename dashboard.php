@@ -64,18 +64,19 @@ $fmt->header->title_page("Dashboard");
   </div><!--  content-pag -->
   <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO; ?>css/modal.adm.css?reload" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO;?>css/modal-theme.adm.css?reload" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="<?php echo _RUTA_WEB_NUCLEO;?>css/finder.css?reload" rel="stylesheet" type="text/css">
 
-  <div class="modal modal-m-<?php echo $url_a; ?>" id="modal">
-    <div class="modal-inner">
-      <div class="preloader-page"></div>
-    </div>
-  </div>
+  <div class="modal modal-eliminar"><div class="modal-eliminar-inner"></div></div>
+  <div class="modal modal-editar"><div class="modal-editar-inner"></div></div>
+  <div class="modal modal-finder"><div class="modal-finder-inner"></div></div>
+  <div class="modal modal-form modal-m-<?php echo $url_a; ?>" id="modal"><div class="modal-inner"><div class="preloader-page"></div></div></div>
+
   <script src="<?php echo _RUTA_WEB_NUCLEO; ?>js/jquery-ui.min.js"></script>
   <script src="<?php echo _RUTA_WEB_NUCLEO; ?>js/bootstrap.js"></script>
   <script src="<?php echo _RUTA_WEB_NUCLEO; ?>js/summernote.js"></script>
-  
+
   <script type="text/javascript" src="<?php echo _RUTA_WEB_NUCLEO; ?>js/bootstrap-datetimepicker.min.js"></script>
-<script type="text/javascript" src="<?php echo _RUTA_WEB_NUCLEO; ?>js/bootstrap-datetimepicker.es.js"></script>
+  <script type="text/javascript" src="<?php echo _RUTA_WEB_NUCLEO; ?>js/bootstrap-datetimepicker.es.js"></script>
   <script type="text/javascript" language="javascript" src="<? echo _RUTA_WEB_NUCLEO; ?>js/core.js?reload"></script>
   </body>
   </html>
