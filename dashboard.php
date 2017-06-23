@@ -28,7 +28,7 @@ $fmt->header->title_page("Dashboard");
   <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO;?>css/animate.css?reload" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO;?>css/bootstrap-datetimepicker.min.css?reload" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO;?>css/datetimepicker.adm.css?reload" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO;?>css/bootstrap-glyphicons.css" rel="stylesheet" type="text/css">
 
   <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO; ?>css/theme.adm.css?reload" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO; ?>css/estilos.adm.css?reload" rel="stylesheet" type="text/css">
