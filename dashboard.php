@@ -68,6 +68,7 @@ $fmt->header->title_page("Dashboard");
 
   <div class="modal modal-eliminar"><div class="modal-eliminar-inner"></div></div>
   <div class="modal modal-editar"><div class="modal-editar-inner"></div></div>
+  <div class="modal modal-list"><div class="modal-list-inner"></div></div>
   <div class="modal modal-finder"><div class="modal-finder-inner"></div></div>
   <div class="modal modal-form modal-m-<?php echo $url_a; ?>" id="modal"><div class="modal-inner"><div class="preloader-page"></div></div></div>
 
