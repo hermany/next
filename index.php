@@ -8,8 +8,6 @@
    * Devs.: Ariel Velazques, Ariel Ortuño, Cidar Veizaga, Cristian Grageda, Carolina Sanchez, Marcelo Garcia
 */
   header('Content-Type: text/html; charset=utf8');
-  error_reporting(E_ALL & ~E_NOTICE);
-  ini_set('display_errors','Off');
 
   require_once("config.php");
 

@@ -42,8 +42,7 @@ $fmt->header->title_page("Dashboard");
   ?>
   <div class='preloader-modulo'></div>
   <div class="container-fluid content-page" id="content-page">
-    <?php
-
+  <?php
     if ($_GET["m"]){
       $sql ="SELECT mod_url,mod_id,mod_ruta_amigable FROM modulo WHERE mod_ruta_amigable='".$_GET["m"]."'";
       $rs = $fmt->query->consulta($sql,__METHOD__);
@@ -58,7 +57,7 @@ $fmt->header->title_page("Dashboard");
         $fmt->error->error_pag_no_encontrada();
       }
     }
-    ?>
+  ?>
   <!-- <a class="btn-menu-ajax" id_mod="27" vars="" >hello</a> -->
 
   </div><!--  content-pag -->
@@ -67,8 +66,8 @@ $fmt->header->title_page("Dashboard");
   <link rel="stylesheet" href="<?php echo _RUTA_WEB_NUCLEO;?>css/finder.css?reload" rel="stylesheet" type="text/css">
 
   <div class="modal modal-eliminar"><div class="modal-eliminar-inner"></div></div>
-  <div class="modal modal-editar"><div class="modal-editar-inner"></div></div>
   <div class="modal modal-list"><div class="modal-list-inner"></div></div>
+  <div class="modal modal-editar"><div class="modal-editar-inner"></div></div>
   <div class="modal modal-finder"><div class="modal-finder-inner"></div></div>
   <div class="modal modal-form modal-m-<?php echo $url_a; ?>" id="modal"><div class="modal-inner"><div class="preloader-page"></div></div></div>
 
