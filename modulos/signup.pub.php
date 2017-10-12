@@ -7,7 +7,7 @@ $fmt->publicacion->publicacion($fmt,$pub_id);
 
 <div class="pub container-fluid pub-<?php echo $fmt->publicacion->get_pub_nombre(); ?>">
   <div class="container">
-    <h1 class="title" lang="es">Crea tu nueva cuenta</h1>
+    <h1 class="title" lang="es">Crea una nueva cuenta</h1>
     <span class="descripcion" lang="es">para tu empresa</span>
     <form class="form" method="post">
       <div class="form-control col-sm-6 pull-left ">
@@ -23,13 +23,13 @@ $fmt->publicacion->publicacion($fmt,$pub_id);
       </div>
       <div class="form-control">
         <i class="icn icn-suitcase"></i>
-        <input class="input-icon"  lang="es" name="inputEmpresa" id="inputEmpresa" placeholder="Nombre de tu empresa" value="">
+        <input class="input-icon"  lang="es" name="inputEmpresa" id="inputCuenta" placeholder="Nombre de la cuenta ( luego puedes crear más cuentas)" value="">
       </div>
       <div class="form-control">
         <div class="checkbox">
            <label>
              <input type="checkbox" lang="es"> Está bien enviarme (muy ocasional)
-un email sobre el servicio de Next.
+un email sobre novedades de Next.
            </label>
          </div>
       </div>
