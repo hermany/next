@@ -1,0 +1,84 @@
+// out: default.theme.css, sourcemap: false, compress: true
+
+/*   varaiables   */
+@color-bg: #F4F4F4;
+@blanco: #FFFFFF;
+@blanco-a: #F4F4F4;
+@azul-1:#042E58;
+@azul-2:#043263;
+@azul-3:#005894;
+@azul-4:#006EC1;
+@celeste-1:#009EE5;
+@celeste-2:#52BCEC;
+@celeste-3:#89D1F3;
+@celeste-4:#B5E5F9;
+@amarillo:#FDBD2C;
+@naranja:#F6891E;
+@rosa:#C8175E;
+@verde:#89C82D;
+@negro-1:#333;
+@negro-2:#474B50;
+@gris-1:#777;
+@gris-2:#ccc;
+
+
+@height-nav:100px;
+
+
+@font-face {
+  font-family: "StagSans-regular";
+  src: url("../fonts/StagSans-book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "StagSans-light";
+  src: url("../fonts/StagSans-light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "StagSans-bold";
+  src: url("../fonts/StagSans-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-regular(){
+  font-family: "StagSans-regular", arial, serif;
+}
+.font-light(){
+  font-family: "StagSans-light", arial, serif;
+
+}
+.font-bold(){
+  font-family: "StagSans-regular", arial, serif;
+}
+
+.border(@x){
+  border:1px solid @x;
+}
+
+.border-radius(@x){
+  border-radius: @x;
+}
+
+/*   General */
+*{
+  margin:0;
+  padding: 0;
+      text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+body{
+  background-color: @blanco-a;
+  .font-regular();
+  font-size: 14px;
+  margin:0;
+  padding: 0;
+}
+
+::-webkit-input-placeholder { color: @gris-1; } /* WebKit */
+:-moz-placeholder { color: @gris-1; } /* Firefox 18- */
+::-moz-placeholder { color: @gris-1; } /* Firefox 19+ */
+:-ms-input-placeholder { color: @gris-1; } /* IE 10+ */
