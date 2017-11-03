@@ -29,14 +29,10 @@ echo $fmt->header->header_html();
   <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO; ?>css/login-theme.adm.css" rel="stylesheet" type="text/css">
   <?PHP if (_THEME_DEFAULT){ ?>
   <link rel="stylesheet" href="<? echo _THEME_DEFAULT;?>" rel="stylesheet" type="text/css">
-  <? } ?>
+  <?php } ?>
   <?php
   echo $fmt->header->js_jquery();
-
-  
-
   require_once(_RUTA_NUCLEO."modulos/login/login.form.php");
-
   ?>
 
   <div class="login-footer">

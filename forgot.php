@@ -18,15 +18,11 @@ echo $fmt->header->header_html();
   <link rel="stylesheet" href="<? echo _RUTA_WEB_NUCLEO; ?>css/login-theme.adm.css" rel="stylesheet" type="text/css">
   <?PHP if (_THEME_DEFAULT){ ?>
   <link rel="stylesheet" href="<? echo _THEME_DEFAULT;?>" rel="stylesheet" type="text/css">
-  <? } ?>
+  <?php } ?>
   <?php
-  echo $fmt->header->js_jquery();
-
-
-  require_once(_RUTA_NUCLEO."modulos/login/forgot.form.php");
-
+    echo $fmt->header->js_jquery();
+    require_once(_RUTA_NUCLEO."modulos/login/forgot.form.php");
   ?>
-
   <div class="login-footer">
     2016-2017 <strong>®</strong> Wappcom &nbsp; | &nbsp;  power <i class="icn-cc"></i> <?php echo _VZ; ?>
   </div>
