@@ -1,13 +1,13 @@
-# htaccess /home1/hermanyu/public_html/next/.htaccess
-# Fecha de modificacion:11 09 2017 16:09:09
+# htaccess /Applications/XAMPP/xamppfiles/htdocs/server/next/.htaccess
+# Fecha de modificacion:27 05 2018 00:05:22
 #
 Options -Indexes
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteCond %{SCRIPT_FILENAME} !-f
 #
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.next.wappcom.com [NC]
-RewriteRule ^(.*)$ http://next.wappcom.com/$1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^http://localhost/server/next/ [NC]
+RewriteRule ^(.*)$ http://localhost/server/next/$1 [L,R=301]
 #
 RewriteCond %{QUERY_STRING} (;|<|>|’|”|\)|%0A|%0D|%22|%27|%3C|%3E|%00).*(/\*|union|select|insert|query|cast|set|declare|drop|update|md5|benchmark) [NC,OR]
 RewriteCond %{QUERY_STRING} \.\./\.\. [OR]
@@ -89,7 +89,7 @@ RewriteRule (.*\.php)s$ $1 [H=application/x-httpd-php-source]
 #
 <IfModule mod_headers.c>
     <FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff|woff2)$">
-        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Origin "*" 
     </FilesMatch>
 </IfModule>
 <IfModule mod_mime.c>
@@ -107,7 +107,7 @@ AddEncoding gzip svgz
  <FilesMatch ".(gif|jpg|jpeg|png|swf|woff|svg)$">
  # 2 weeks
  ExpiresDefault A604800
- Header append Cache-Control "public"
+ Header append Cache-Control "public" 
  </FilesMatch>
  <FilesMatch ".(xml|txt|html)$">
  # 2 hours
@@ -125,56 +125,81 @@ Rewriterule ^dashboard$  dashboard.php
 Rewriterule ^dashboard/([^/]*)$   dashboard.php?m=$1
 Rewriterule ^dashboard/([^/]*)/([0-9]*)$   dashboard.php?m=$1&cat=$2
 Rewriterule ^dashboard/([^/]*)/([^/]*)-catg$   dashboard.php?m=$1&catg=$2
+Rewriterule ^dashboard/webapp/([^/]*)$   dashboard.php?app=$1
+Rewriterule ^dashboard/webapp/([^/]*)/([^/]*)$   dashboard.php?app=$1&accion=$2
 Rewriterule ^login$  login.php
 Rewriterule ^logout$  logout.php
 Rewriterule ^forgot$  forgot.php
 Rewriterule ^buscar/([^/]*)$  index.php?cat=1&pla=2&q=$1
 Rewriterule ^portada$  index.php?cat=1&pla=1
-Rewriterule ^portada/p=([0-9]+)$  index.php?cat=1&pla=$1
+Rewriterule ^portada#([^/]*)$  index.php?cat=1&pla=1#$1
+Rewriterule ^portada/p=([0-9]+)([^/]*)$  index.php?cat=1&pla=$1$2
 Rewriterule ^portada/pag=([0-9]+)$  index.php?cat=1&pla=1&pag=$1
 Rewriterule ^portada/([^/]*).html$  index.php?cat=1&pla=3&nota=$1
 Rewriterule ^portada/prod=([0-9]+)$  index.php?cat=1&pla=1&prod=$1
 Rewriterule ^portada/([^/]*).prod$  index.php?cat=1&pla=3&ra_prod=$1
+Rewriterule ^portada/([^/]*)-catg$  index.php?cat=1&pla=2&catg=$1
 Rewriterule ^portada/prod=([0-9]+)&ruta=([^/]*)$  index.php?cat=1&pla=1&prod=$1&ruta=$2
 Rewriterule ^apps$  index.php?cat=2&pla=1
-Rewriterule ^apps/p=([0-9]+)$  index.php?cat=2&pla=$1
+Rewriterule ^apps#([^/]*)$  index.php?cat=2&pla=1#$1
+Rewriterule ^apps/p=([0-9]+)([^/]*)$  index.php?cat=2&pla=$1$2
 Rewriterule ^apps/pag=([0-9]+)$  index.php?cat=2&pla=1&pag=$1
 Rewriterule ^apps/([^/]*).html$  index.php?cat=2&pla=3&nota=$1
 Rewriterule ^apps/prod=([0-9]+)$  index.php?cat=2&pla=1&prod=$1
 Rewriterule ^apps/([^/]*).prod$  index.php?cat=2&pla=3&ra_prod=$1
+Rewriterule ^apps/([^/]*)-catg$  index.php?cat=2&pla=2&catg=$1
 Rewriterule ^apps/prod=([0-9]+)&ruta=([^/]*)$  index.php?cat=2&pla=1&prod=$1&ruta=$2
 Rewriterule ^blog$  index.php?cat=3&pla=1
-Rewriterule ^blog/p=([0-9]+)$  index.php?cat=3&pla=$1
+Rewriterule ^blog#([^/]*)$  index.php?cat=3&pla=1#$1
+Rewriterule ^blog/p=([0-9]+)([^/]*)$  index.php?cat=3&pla=$1$2
 Rewriterule ^blog/pag=([0-9]+)$  index.php?cat=3&pla=1&pag=$1
 Rewriterule ^blog/([^/]*).html$  index.php?cat=3&pla=3&nota=$1
 Rewriterule ^blog/prod=([0-9]+)$  index.php?cat=3&pla=1&prod=$1
 Rewriterule ^blog/([^/]*).prod$  index.php?cat=3&pla=3&ra_prod=$1
+Rewriterule ^blog/([^/]*)-catg$  index.php?cat=3&pla=2&catg=$1
 Rewriterule ^blog/prod=([0-9]+)&ruta=([^/]*)$  index.php?cat=3&pla=1&prod=$1&ruta=$2
 Rewriterule ^precios$  index.php?cat=4&pla=1
-Rewriterule ^precios/p=([0-9]+)$  index.php?cat=4&pla=$1
+Rewriterule ^precios#([^/]*)$  index.php?cat=4&pla=1#$1
+Rewriterule ^precios/p=([0-9]+)([^/]*)$  index.php?cat=4&pla=$1$2
 Rewriterule ^precios/pag=([0-9]+)$  index.php?cat=4&pla=1&pag=$1
 Rewriterule ^precios/([^/]*).html$  index.php?cat=4&pla=3&nota=$1
 Rewriterule ^precios/prod=([0-9]+)$  index.php?cat=4&pla=1&prod=$1
 Rewriterule ^precios/([^/]*).prod$  index.php?cat=4&pla=3&ra_prod=$1
+Rewriterule ^precios/([^/]*)-catg$  index.php?cat=4&pla=2&catg=$1
 Rewriterule ^precios/prod=([0-9]+)&ruta=([^/]*)$  index.php?cat=4&pla=1&prod=$1&ruta=$2
 Rewriterule ^documentacin$  index.php?cat=5&pla=1
-Rewriterule ^documentacin/p=([0-9]+)$  index.php?cat=5&pla=$1
+Rewriterule ^documentacin#([^/]*)$  index.php?cat=5&pla=1#$1
+Rewriterule ^documentacin/p=([0-9]+)([^/]*)$  index.php?cat=5&pla=$1$2
 Rewriterule ^documentacin/pag=([0-9]+)$  index.php?cat=5&pla=1&pag=$1
 Rewriterule ^documentacin/([^/]*).html$  index.php?cat=5&pla=3&nota=$1
 Rewriterule ^documentacin/prod=([0-9]+)$  index.php?cat=5&pla=1&prod=$1
 Rewriterule ^documentacin/([^/]*).prod$  index.php?cat=5&pla=3&ra_prod=$1
+Rewriterule ^documentacin/([^/]*)-catg$  index.php?cat=5&pla=2&catg=$1
 Rewriterule ^documentacin/prod=([0-9]+)&ruta=([^/]*)$  index.php?cat=5&pla=1&prod=$1&ruta=$2
 Rewriterule ^contacto$  index.php?cat=7&pla=1
-Rewriterule ^contacto/p=([0-9]+)$  index.php?cat=7&pla=$1
+Rewriterule ^contacto#([^/]*)$  index.php?cat=7&pla=1#$1
+Rewriterule ^contacto/p=([0-9]+)([^/]*)$  index.php?cat=7&pla=$1$2
 Rewriterule ^contacto/pag=([0-9]+)$  index.php?cat=7&pla=1&pag=$1
 Rewriterule ^contacto/([^/]*).html$  index.php?cat=7&pla=3&nota=$1
 Rewriterule ^contacto/prod=([0-9]+)$  index.php?cat=7&pla=1&prod=$1
 Rewriterule ^contacto/([^/]*).prod$  index.php?cat=7&pla=3&ra_prod=$1
+Rewriterule ^contacto/([^/]*)-catg$  index.php?cat=7&pla=2&catg=$1
 Rewriterule ^contacto/prod=([0-9]+)&ruta=([^/]*)$  index.php?cat=7&pla=1&prod=$1&ruta=$2
 Rewriterule ^soporte$  index.php?cat=8&pla=1
-Rewriterule ^soporte/p=([0-9]+)$  index.php?cat=8&pla=$1
+Rewriterule ^soporte#([^/]*)$  index.php?cat=8&pla=1#$1
+Rewriterule ^soporte/p=([0-9]+)([^/]*)$  index.php?cat=8&pla=$1$2
 Rewriterule ^soporte/pag=([0-9]+)$  index.php?cat=8&pla=1&pag=$1
 Rewriterule ^soporte/([^/]*).html$  index.php?cat=8&pla=3&nota=$1
 Rewriterule ^soporte/prod=([0-9]+)$  index.php?cat=8&pla=1&prod=$1
 Rewriterule ^soporte/([^/]*).prod$  index.php?cat=8&pla=3&ra_prod=$1
+Rewriterule ^soporte/([^/]*)-catg$  index.php?cat=8&pla=2&catg=$1
 Rewriterule ^soporte/prod=([0-9]+)&ruta=([^/]*)$  index.php?cat=8&pla=1&prod=$1&ruta=$2
+Rewriterule ^signup$  index.php?cat=9&pla=1
+Rewriterule ^signup#([^/]*)$  index.php?cat=9&pla=1#$1
+Rewriterule ^signup/p=([0-9]+)([^/]*)$  index.php?cat=9&pla=$1$2
+Rewriterule ^signup/pag=([0-9]+)$  index.php?cat=9&pla=1&pag=$1
+Rewriterule ^signup/([^/]*).html$  index.php?cat=9&pla=3&nota=$1
+Rewriterule ^signup/prod=([0-9]+)$  index.php?cat=9&pla=1&prod=$1
+Rewriterule ^signup/([^/]*).prod$  index.php?cat=9&pla=3&ra_prod=$1
+Rewriterule ^signup/([^/]*)-catg$  index.php?cat=9&pla=2&catg=$1
+Rewriterule ^signup/prod=([0-9]+)&ruta=([^/]*)$  index.php?cat=9&pla=1&prod=$1&ruta=$2
