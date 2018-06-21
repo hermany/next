@@ -7,6 +7,7 @@ foreach ($rand as $val) {
   $vrand = $val;
 }
 ?>
+<link rel="stylesheet" href="<?php echo _RUTA_WEB_NUCLEO; ?>css/font-awesome.min.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo _RUTA_WEB; ?>css/next.theme.css?reload-<?php echo $vrand;?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo _RUTA_WEB; ?>css/lato-font.css?reload-<?php echo $vrand;?>" type="text/css" media="screen" />
 
